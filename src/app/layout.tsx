@@ -1,7 +1,7 @@
 import "./globals.css";
 import { inter, jetbrainsMono } from "@/config/fonts";
 import { metaData } from "@/config/metadata";
-import { Header } from "@/components";
+import { Header, ThemeProvider } from "@/components";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -15,15 +15,23 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
-      className={`dark ${inter.variable} ${jetbrainsMono.variable}`}
+      lang="pt-BR"
+      className={`${inter.variable} ${jetbrainsMono.variable}`}
+      suppressHydrationWarning
     >
       <body className="font-sans antialiased">
-        <Header />
-        {children}
-        <GoogleAnalytics gaId={process.env.GOOGLE_ANALYTICS_ID as string} />
-        <Analytics />
-        <SpeedInsights />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          {children}
+          <GoogleAnalytics gaId={process.env.GOOGLE_ANALYTICS_ID as string} />
+          <Analytics />
+          <SpeedInsights />
+        </ThemeProvider>
       </body>
     </html>
   );

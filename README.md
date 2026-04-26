@@ -1,10 +1,12 @@
-# imabhishek
+# Cauã Alves - Portfólio Profissional
 
-Welcome to **imabhishek** – a modern portfolio site built with Next.js and Tailwind CSS. This project showcases your skills, work experience, and projects with interactive animations and a clean, responsive design.
+Bem-vindo ao meu **portfólio profissional** – um site moderno construído com Next.js e Tailwind CSS. Este projeto apresenta minhas habilidades, experiência de trabalho e projetos com animações interativas e design responsivo e limpo.
 
-## 🚀 Overview
+## 🚀 Sobre
 
-imabhishek serves as a personal portfolio site to display your professional journey, technical abilities, and select projects. It leverages the power of Next.js for fast, scalable web applications and Tailwind CSS for elegant styling. Framer Motion powers smooth animations throughout the site.
+Este portfólio serve como meu site profissional para exibir minha jornada como desenvolvedor full-stack, habilidades técnicas e projetos selecionados. Aproveita o poder do Next.js para aplicações web rápidas e escaláveis, Tailwind CSS para estilização elegante e Framer Motion para animações suaves em todo o site.
+
+**Sobre mim:** Desenvolvedor Full-Stack Sênior com 8+ anos de experiência em React, Node.js, Flutter e Blockchain. Formado em Ciência da Computação pela UFRJ. Avaliação 5.0⭐ em plataformas freelance com 100% de projetos entregues no prazo.
 
 ## 🛠️ Tech Stack
 
@@ -30,11 +32,11 @@ imabhishek serves as a personal portfolio site to display your professional jour
 
 ## 📦 Getting Started
 
-Clone the repository:
+Clone o repositório:
 
 ```bash
-git clone https://github.com/Abhishek1350/My-Portfolio.git
-cd My-Portfolio
+git clone https://github.com/cauaprjct/Meu-Portfolio.git
+cd Meu-Portfolio
 ```
 
 Install dependencies:
@@ -51,9 +53,9 @@ npm run dev
 
 Visit [http://localhost:3000](http://localhost:3000) to view your portfolio.
 
-## 🌐 Live Demo
+## 🌐 Demo ao Vivo
 
-Check out the live site: [imabhishek.site](https://www.imabhishek.site)
+Confira o site ao vivo: [cauadev.vercel.app](https://cauadev.vercel.app)
 
 ## 📄 License
 
@@ -67,12 +69,14 @@ You are free to share, adapt, and build upon this project for personal and educa
 Contributions, suggestions, and issues are welcome!  
 Open an issue or submit a pull request to improve the portfolio.
 
-## 📫 Contact
+## 📫 Contato
 
-- **Email:** hello@imabhishek.site
-- **Website:** [imabhishek.site](https://www.imabhishek.site)
-- **GitHub:** [Abhishek1350](https://github.com/Abhishek1350)
+- **Email:** contato@cauadev.com
+- **Website:** [cauadev.vercel.app](https://cauadev.vercel.app)
+- **GitHub:** [cauaprjct](https://github.com/cauaprjct)
+- **LinkedIn:** [caua-alves-dev](https://www.linkedin.com/in/caua-alves-dev/)
+- **Freelancer:** [CauaAlves](https://www.freelancer.com/u/CauaAlves)
 
 ---
 
-> Crafted with Next.js, Tailwind CSS, and passion by [Abhishek1350](https://github.com/Abhishek1350)
+> Desenvolvido com Next.js, Tailwind CSS e dedicação por [Cauã Alves](https://github.com/cauaprjct) 🚀

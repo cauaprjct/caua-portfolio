@@ -1,9 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useState } from "react";
+import { ThemeToggle } from "@/components";
 
 export function Header() {
   const [time, setTime] = useState("");
@@ -25,22 +24,11 @@ export function Header() {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="sticky top-0 z-20  px-6 py-3 bg-black/50 backdrop-blur-sm font-mono"
+      className="sticky top-0 z-20 px-6 py-3 bg-background/50 backdrop-blur-sm font-mono border-b border-border/50"
     >
-      <nav className="w-full flex items-center justify-between">
-        <div className="text-white">
-          <Link href="/" className="flex gap-2 items-center">
-            <Image
-              src="/logo.webp"
-              alt="imabhishek logo"
-              className="rounded-full h-8 w-8"
-              width={50}
-              height={50}
-            />
-            <span className="text-lg">imabhishek</span>
-          </Link>
-        </div>
-        <div className=" text-gray-400">{time}</div>
+      <nav className="w-full flex items-center justify-end gap-4">
+        <div className="text-muted-foreground">{time}</div>
+        <ThemeToggle />
       </nav>
     </motion.header>
   );

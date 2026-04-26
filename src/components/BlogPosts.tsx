@@ -2,28 +2,33 @@
 
 import { motion } from "framer-motion"
 import { FaPenFancy } from "react-icons/fa"
-import { FiArrowRight } from "react-icons/fi"
+import { FiArrowRight, FiBookOpen, FiClock, FiCalendar } from "react-icons/fi"
+import Link from "next/link"
+import { blogPosts } from "@/config/blog-data"
 
-const blogPosts = [
-  {
-    title: "My Self-Taught Developer Journey",
-    description: "How I transformed from complete beginner to React developer during the 2021 lockdown.",
-    date: "Dec 15, 2024",
-    gradient: "from-blue-600 to-cyan-700",
-  },
-  {
-    title: "Building Scalable React Apps",
-    description: "Best practices and patterns I've learned while building production applications.",
-    date: "Dec 8, 2024",
-    gradient: "from-cyan-600 to-blue-700",
-  },
-  {
-    title: "Next.js Performance Tips",
-    description: "Advanced techniques for optimizing Next.js applications and improving user experience.",
-    date: "Nov 28, 2024",
-    gradient: "from-blue-700 to-cyan-600",
-  },
-]
+const tagColors: Record<string, { bg: string; text: string; border: string }> = {
+  IA: { bg: "bg-purple-500/10", text: "text-purple-400", border: "border-purple-500/20" },
+  Produtividade: { bg: "bg-emerald-500/10", text: "text-emerald-400", border: "border-emerald-500/20" },
+  Dev: { bg: "bg-blue-500/10", text: "text-blue-400", border: "border-blue-500/20" },
+  MVP: { bg: "bg-amber-500/10", text: "text-amber-400", border: "border-amber-500/20" },
+  Python: { bg: "bg-yellow-500/10", text: "text-yellow-400", border: "border-yellow-500/20" },
+  Automação: { bg: "bg-teal-500/10", text: "text-teal-400", border: "border-teal-500/20" },
+  OpenAI: { bg: "bg-green-500/10", text: "text-green-400", border: "border-green-500/20" },
+  Flutter: { bg: "bg-sky-500/10", text: "text-sky-400", border: "border-sky-500/20" },
+  "Clean Architecture": { bg: "bg-indigo-500/10", text: "text-indigo-400", border: "border-indigo-500/20" },
+  BLoC: { bg: "bg-cyan-500/10", text: "text-cyan-400", border: "border-cyan-500/20" },
+  Dart: { bg: "bg-blue-500/10", text: "text-blue-400", border: "border-blue-500/20" },
+  TypeScript: { bg: "bg-blue-500/10", text: "text-blue-400", border: "border-blue-500/20" },
+  Patterns: { bg: "bg-pink-500/10", text: "text-pink-400", border: "border-pink-500/20" },
+  "Node.js": { bg: "bg-green-500/10", text: "text-green-400", border: "border-green-500/20" },
+  Advanced: { bg: "bg-rose-500/10", text: "text-rose-400", border: "border-rose-500/20" },
+  Gemini: { bg: "bg-orange-500/10", text: "text-orange-400", border: "border-orange-500/20" },
+  Mobile: { bg: "bg-violet-500/10", text: "text-violet-400", border: "border-violet-500/20" },
+}
+
+function getTagStyle(tag: string) {
+  return tagColors[tag] || { bg: "bg-gray-500/10", text: "text-gray-400", border: "border-gray-500/20" }
+}
 
 export function BlogPosts() {
   return (
@@ -45,9 +50,14 @@ export function BlogPosts() {
           >
             <FaPenFancy className="w-6 h-6 text-blue-400" />
           </motion.div>
-          <h2 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-300 bg-clip-text text-transparent">
-            Latest Insights
-          </h2>
+          <div>
+            <h2 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-300 bg-clip-text text-transparent">
+              Artigos Recentes
+            </h2>
+            <p className="text-gray-400 text-sm mt-1">
+              {blogPosts.length} artigos técnicos sobre desenvolvimento, automação e tecnologias modernas
+            </p>
+          </div>
         </div>
         <motion.div
           initial={{ width: 0 }}
@@ -58,30 +68,85 @@ export function BlogPosts() {
         />
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="blog">
         {blogPosts.map((post, index) => (
-          <motion.article
-            key={index}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: index * 0.1, ease: "easeOut" }}
-            viewport={{ once: true }}
-            whileHover={{ scale: 1.01 }}
-            className="group bg-gray-900/30 rounded-xl overflow-hidden hover:bg-gray-800/50 transition-all duration-500"
-          >
-            <div className={`h-48 bg-gradient-to-br ${post.gradient} flex items-center justify-center`}>
-              <h3 className="text-xl font-bold text-white text-center px-4">{post.title}</h3>
-            </div>
-            <div className="p-6">
-              <p className="text-gray-300 mb-4 leading-relaxed">{post.description}</p>
-              <div className="flex items-center justify-between">
-                <span className="text-sm text-gray-500">{post.date}</span>
-                <motion.div whileHover={{ x: 5 }} transition={{ duration: 0.3 }}>
-                  <FiArrowRight className="w-4 h-4 text-blue-400" />
-                </motion.div>
+          <Link href={`/blog/${post.slug}`} key={index} className="group block h-full">
+            <motion.article
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
+              viewport={{ once: true }}
+              whileHover={{ y: -8 }}
+              className="h-full bg-gray-900/30 rounded-2xl overflow-hidden hover:bg-gray-800/40 transition-colors duration-500 border border-gray-700/30 hover:border-cyan-500/40 relative"
+            >
+              {/* Glow effect on hover */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5" />
               </div>
-            </div>
-          </motion.article>
+
+              {/* Header with gradient */}
+              <div className={`h-52 bg-gradient-to-br ${post.gradient} flex items-end justify-start relative overflow-hidden p-6`}>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full blur-3xl group-hover:bg-white/10 transition-all duration-700" />
+                <div className="absolute bottom-0 left-0 w-24 h-24 bg-black/20 rounded-full blur-2xl" />
+
+                <motion.h3
+                  className="text-xl font-bold text-white relative z-10 group-hover:scale-[1.02] transition-transform duration-500 leading-tight"
+                >
+                  {post.title}
+                </motion.h3>
+              </div>
+
+              {/* Content */}
+              <div className="p-6 relative z-10">
+                {/* Meta row */}
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-1.5 text-gray-400">
+                      <FiCalendar className="w-3.5 h-3.5" />
+                      <span className="text-xs">{post.date}</span>
+                    </div>
+                    <div className="flex items-center gap-1.5 text-gray-400">
+                      <FiClock className="w-3.5 h-3.5" />
+                      <span className="text-xs">{post.readTime}</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-1 text-cyan-400/80">
+                    <FiBookOpen className="w-3.5 h-3.5" />
+                  </div>
+                </div>
+
+                {/* Description */}
+                <p className="text-gray-300 mb-5 leading-relaxed text-sm line-clamp-4">
+                  {post.description}
+                </p>
+
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 mb-5">
+                  {post.tags.map((tag, tagIndex) => {
+                    const style = getTagStyle(tag)
+                    return (
+                      <span
+                        key={tagIndex}
+                        className={`text-xs ${style.text} ${style.bg} px-2.5 py-1 rounded-md border ${style.border} transition-all duration-300 group-hover:brightness-110`}
+                      >
+                        {tag}
+                      </span>
+                    )
+                  })}
+                </div>
+
+                {/* CTA */}
+                <div className="flex items-center gap-2 text-cyan-400 text-sm font-medium">
+                  <span className="relative">
+                    Ler artigo completo
+                    <span className="absolute bottom-0 left-0 w-0 h-px bg-cyan-400 group-hover:w-full transition-all duration-500" />
+                  </span>
+                  <FiArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300" />
+                </div>
+              </div>
+            </motion.article>
+          </Link>
         ))}
       </div>
     </section>

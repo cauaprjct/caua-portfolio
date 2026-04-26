@@ -58,7 +58,7 @@ export function MySetup() {
           >
             <Image
               src="/images/about/abhishek-setup-1.webp"
-              alt="Abhishek's Development Setup - Main View"
+              alt="Meu Setup de Desenvolvimento - Vista Principal"
               width={800}
               height={600}
               className="w-full h-auto rounded-sm object-cover hover:scale-102 transition-transform duration-700 ease-out"
@@ -78,7 +78,7 @@ export function MySetup() {
           >
             <Image
               src="/images/about/abhishek-setup-2.webp"
-              alt="Abhishek's Development Setup - Alternative View"
+              alt="Meu Setup de Desenvolvimento - Vista Alternativa"
               width={800}
               height={600}
               className="w-full h-auto rounded-sm object-cover hover:scale-102 transition-transform duration-700 ease-out"
@@ -95,9 +95,9 @@ export function MySetup() {
         >
           <div className="mb-8">
             <p className="leading-relaxed">
-              Built for focus, creativity, and high performance.
-              This is where I code, build, and brainstorm, turning late-night sessions into polished projects
-              (with a few gaming breaks in between).
+              Setup montado para foco, produtividade e entregas rápidas.
+              É aqui que codifico, construo e transformo ideias em projetos funcionais
+              (com algumas pausas para jogos no meio do caminho).
             </p>
           </div>
 

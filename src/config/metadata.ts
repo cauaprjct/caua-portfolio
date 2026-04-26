@@ -1,38 +1,38 @@
 import type { Metadata } from "next";
 
 export const metaData: Metadata = {
-    metadataBase: new URL(process.env.NEXT_PUBLIC_CURRENT_SITE_URL as string),
+    metadataBase: new URL(process.env.NEXT_PUBLIC_CURRENT_SITE_URL || "https://cauadev-portfolio.vercel.app"),
     openGraph: {
         type: "website",
-        locale: "en_US",
-        siteName: "Abhishek Portfolio",
+        locale: "pt_BR",
+        siteName: "Cauã Alves - Desenvolvedor Full-Stack",
         title:
-            "Abhishek Bhardwaj | Software Developer | React, Next.js, Nest.js in Himachal Pradesh",
+            "Cauã Alves | Desenvolvedor Full-Stack | Python, React, Next.js & Flutter",
         description:
-            "Discover Abhishek Bhardwaj, a self-taught Full-Stack Developer from Himachal Pradesh, India. Masterfully crafting scalable web marvels with React, Next.js, Nest.js, Remix, and AI-driven innovations. Explore his portfolio showcasing expertise in Shopify apps, dynamic frontends, and robust backends using PostgreSQL, Strapi, Sanity, Supabase, and Appwrite.",
+            "Desenvolvedor Full-Stack focado em soluções práticas. Python para backend e automação, React/Next.js para web, Flutter para mobile. Avaliação 5.0⭐ em plataformas freelance. Entrego MVPs rápidos e soluções com IA.",
         images: [
             {
                 url: "/og-image.webp",
-                alt: "Abhishek Bhardwaj | Software Developer | React, Next.js, Nest.js",
+                alt: "Cauã Alves | Desenvolvedor Full-Stack | Python, React, Next.js & Flutter",
                 height: 630,
                 width: 1200,
             },
         ],
     },
     title:
-        "Abhishek Bhardwaj | Software Developer | React, Next.js, Nest.js in Himachal Pradesh",
+        "Cauã Alves | Desenvolvedor Full-Stack | Python, React, Next.js & Flutter",
     description:
-        "Discover Abhishek Bhardwaj, a self-taught Full-Stack Developer from Himachal Pradesh, India. Masterfully crafting scalable web marvels with React, Next.js, Nest.js, Remix, and AI-driven innovations. Explore his portfolio showcasing expertise in Shopify apps, dynamic frontends, and robust backends using PostgreSQL, Strapi, Sanity, Supabase, and Appwrite.",
+        "Desenvolvedor Full-Stack focado em soluções práticas. Python para backend e automação, React/Next.js para web, Flutter para mobile. Avaliação 5.0⭐ em plataformas freelance. Entrego MVPs rápidos e soluções com IA.",
     keywords:
-        "Abhishek Bhardwaj, Full-Stack Developer, ReactJS Developer, NextJS Developer, NestJS Developer, Remix Developer, Shopify Apps, AI Innovation, Web Development, Portfolio, React developer, Next js developer, Nest js developer, Himachal Pradesh, India, PostgreSQL, Strapi, Sanity, Supabase, Appwrite, TailwindCSS",
+        "Cauã Alves, Desenvolvedor Full-Stack, Flutter Developer, React Developer, Next.js Developer, Python Developer, TypeScript Developer, Mobile Development, Web Development, AI Automation, Freelancer, Brasil, Rio de Janeiro, Dart, JavaScript, TailwindCSS, PostgreSQL, MongoDB, Firebase, Vercel, Git, OpenAI",
     robots:
         "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
     icons: {
-        icon: "/favicon.ico",
-        apple: "/apple-touch-icon.png",
+        icon: "/icon.jpg",
+        apple: "/icon.jpg",
     },
     authors: {
-        name: "Abhishek Bhardwaj",
-        url: "https://github.com/abhishek1350",
+        name: "Cauã Alves",
+        url: "https://github.com/cauaprjct",
     },
 };

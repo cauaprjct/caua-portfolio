@@ -26,7 +26,7 @@ export function Projects() {
             <FiCode className="w-6 h-6 text-blue-400" />
           </motion.div>
           <h2 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-300 bg-clip-text text-transparent">
-            Featured Projects
+            Projetos em Destaque
           </h2>
         </div>
         <motion.div
@@ -99,7 +99,7 @@ export function Projects() {
                   rel="noopener noreferrer"
                 >
                   <FiExternalLink className="w-4 h-4" />
-                  Live Demo
+                  Ver Projeto
                 </motion.a>
                 {project.githubUrl && (
                   <motion.a

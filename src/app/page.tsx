@@ -1,6 +1,6 @@
 import {
+  BlogPosts,
   CallToAction,
-  Certifications,
   FadeInUp,
   HeroSection,
   MySetup,
@@ -34,7 +34,7 @@ export default function Portfolio() {
       </FadeInUp>
 
       <FadeInUp delay={0.8}>
-        <Certifications />
+        <BlogPosts />
       </FadeInUp>
 
       <FadeInUp delay={1.0}>

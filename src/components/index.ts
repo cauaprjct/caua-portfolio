@@ -1,7 +1,6 @@
 export * from "./Header";
 export * from "./BlogPosts";
 export * from "./CallToAction";
-export * from "./Certifications";
 export * from "./HeroSection";
 export * from "./MySetup";
 export * from "./Projects";
@@ -9,3 +8,5 @@ export * from "./TechnicalSkills";
 export * from "./WorkExperience";
 export * from "./Testimonials";
 export * from "./ui";
+export * from "./ThemeProvider";
+export * from "./ThemeToggle";

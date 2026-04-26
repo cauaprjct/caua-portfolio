@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { FiCalendar, FiMapPin } from "react-icons/fi";
-import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedinIn, FaBriefcase } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { heroSection } from "@/config/data";
 
@@ -18,6 +18,10 @@ function getSocialIcon(title: string) {
     case "Instagram":
       return (
         <FaInstagram className="w-8 h-8 text-pink-500 hover:text-pink-700" />
+      );
+    case "Freelancer":
+      return (
+        <FaBriefcase className="w-8 h-8 text-emerald-400 hover:text-emerald-600" />
       );
     default:
       return (
@@ -42,7 +46,7 @@ export function HeroSection() {
             className="object-cover"
           />
           <AvatarFallback className="text-3xl font-semibold bg-gray-800">
-            AB
+            CA
           </AvatarFallback>
         </Avatar>
 
@@ -96,7 +100,7 @@ export function HeroSection() {
               href={`mailto:${heroSection.personalInfo.email}`}
             >
               <FiCalendar className="w-4 h-4 mr-2" />
-              <span>Schedule a call</span>
+              <span>Agendar uma call</span>
             </a>
           </motion.div>
         </div>
