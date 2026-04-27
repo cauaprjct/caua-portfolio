@@ -40,11 +40,6 @@ export function HeroSection() {
         className="flex flex-col items-center lg:items-start"
       >
         <Avatar className="w-42 h-42 mb-6 ring-2 ring-gray-800">
-          <AvatarImage
-            src={heroSection.personalInfo.avatar}
-            alt={heroSection.personalInfo.name}
-            className="object-cover"
-          />
           <AvatarFallback className="text-3xl font-semibold bg-gray-800">
             CA
           </AvatarFallback>

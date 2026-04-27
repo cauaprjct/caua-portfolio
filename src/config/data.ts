@@ -44,7 +44,6 @@ export const socialLinks = [
 export const personalInfo = {
   name: "Cauã Alves",
   title: "Desenvolvedor Full-Stack | Python, React, Next.js & Flutter",
-  avatar: "/images/about/caua-alves.png",
   email: "contato@cauadev.com",
   email2: "cauaalvesbalbino@gmail.com",
   location: "Rio de Janeiro, Brasil",
