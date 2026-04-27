@@ -2,8 +2,6 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { ThemeToggle } from "@/components";
-
 export function Header() {
   const [time, setTime] = useState("");
 
@@ -28,7 +26,6 @@ export function Header() {
     >
       <nav className="w-full flex items-center justify-end gap-4">
         <div className="text-muted-foreground">{time}</div>
-        <ThemeToggle />
       </nav>
     </motion.header>
   );
