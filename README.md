@@ -1,80 +1,72 @@
-# Cauã Alves - Portfólio Profissional
+# Cauã Alves — Portfólio Profissional
 
-Bem-vindo ao meu **portfólio profissional** – um site moderno construído com Next.js e Tailwind CSS. Este projeto apresenta minhas habilidades, experiência de trabalho e projetos com animações interativas e design responsivo e limpo.
+Bem-vindo ao meu **portfólio profissional** — um site moderno construído com Next.js e Tailwind CSS. O projeto apresenta minha atuação em Dados, BI e Automação, minha experiência e meus projetos, com animações interativas e design responsivo.
 
 ## 🚀 Sobre
 
-Este portfólio serve como meu site profissional para exibir minha jornada como desenvolvedor full-stack, habilidades técnicas e projetos selecionados. Aproveita o poder do Next.js para aplicações web rápidas e escaláveis, Tailwind CSS para estilização elegante e Framer Motion para animações suaves em todo o site.
+Este portfólio é o meu site profissional, com foco em **Dados, Business Intelligence e Automação**. Construído com Next.js (web rápida e escalável), Tailwind CSS (estilização) e Framer Motion (animações).
 
-**Sobre mim:** Desenvolvedor Full-Stack Sênior com 8+ anos de experiência em React, Node.js, Flutter e Blockchain. Formado em Ciência da Computação pela UFRJ. Avaliação 5.0⭐ em plataformas freelance com 100% de projetos entregues no prazo.
+**Sobre mim:** Trabalho com Dados, BI e Automação — transformo dados brutos e processos manuais em sistemas confiáveis que rodam sozinhos. Power BI e DAX, pipelines e automações serverless no Azure e Python, automação web com Playwright. Também atuo com apps Android nativos (Kotlin/Jetpack Compose) e integração de LLMs (OpenAI, Anthropic, Gemini). Desde 2023 entrego para clientes no Brasil, Reino Unido e Portugal, com 100% de avaliação 5⭐.
 
 ## 🛠️ Tech Stack
 
-- **Framework:** [Next.js](https://nextjs.org/)
-- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
-- **Animation:** [Framer Motion](https://www.framer.com/motion/)
-- **Analytics:** Google Analytics, Vercel Analytics, Speed Insights
-- **Languages:** TypeScript
+- **Dados & BI:** Power BI, DAX, SQL, Pandas, Streamlit
+- **Cloud & Automação:** Azure (Functions, Storage), Playwright, Docker
+- **Linguagens:** Python, TypeScript, JavaScript
+- **Backend:** FastAPI, Node.js
+- **Mobile:** Kotlin / Jetpack Compose, Flutter
+- **IA / LLMs:** OpenAI, Anthropic, Google Gemini
+- **Site:** Next.js · Tailwind CSS · Framer Motion · TypeScript
 
-## ✨ Features
+## ✨ Seções
 
-- **Hero Section:** Brief intro and branding at the top.
-- **Work Experience:** Timeline of your professional roles, responsibilities, and achievements.
-- **Technical Skills:** Visual showcase of your tech stack, tools, and frameworks.
-- **Projects:** Gallery of featured projects with live demo and GitHub links.
-- **Certifications:** List of relevant certifications.
-- **Blog Posts:** Insightful articles and tutorials.
-- **Testimonials:** Endorsements and recommendations.
-- **Call To Action:** Contact and engagement section.
-- **My Setup:** Details on your development and work environment.
-- **Responsive Design:** Optimized for desktop and mobile.
-- **Dark Mode:** Stylish dark theme by default.
+- **Hero:** apresentação e posicionamento.
+- **Experiência:** atuação como freelancer de Dados & Automação e projetos próprios.
+- **Habilidades Técnicas:** stack com foco em Dados, BI, Cloud e Automação.
+- **Projetos:** projetos reais com links de código/demonstração.
+- **Depoimentos:** avaliações reais de clientes (Freelancer.com).
+- **Call To Action:** contato.
+- **Design responsivo** e **dark mode** por padrão.
 
-## 📦 Getting Started
+## 📦 Como rodar localmente
 
 Clone o repositório:
 
 ```bash
-git clone https://github.com/cauaprjct/Meu-Portfolio.git
-cd Meu-Portfolio
+git clone https://github.com/cauaprjct/cauadev-portfolio.git
+cd cauadev-portfolio
 ```
 
-Install dependencies:
+Instale as dependências:
 
 ```bash
 npm install
 ```
 
-Run the development server:
+Rode o servidor de desenvolvimento:
 
 ```bash
 npm run dev
 ```
 
-Visit [http://localhost:3000](http://localhost:3000) to view your portfolio.
+Acesse [http://localhost:3000](http://localhost:3000).
 
 ## 🌐 Demo ao Vivo
 
-Confira o site ao vivo: [cauadev.vercel.app](https://cauadev.vercel.app)
+Site ao vivo: [portifolio-caua.vercel.app](https://portifolio-caua.vercel.app)
 
-## 📄 License
+## 📄 Licença
 
-This project is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/).
+Este projeto está licenciado sob a [Creative Commons Attribution-NonCommercial 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/).
 
-**Summary:**  
-You are free to share, adapt, and build upon this project for personal and educational use, **but not for commercial purposes**. Please give appropriate credit. For full license details, see the [LICENSE](LICENSE) file.
-
-## 🤝 Contributing
-
-Contributions, suggestions, and issues are welcome!  
-Open an issue or submit a pull request to improve the portfolio.
+**Resumo:** você pode compartilhar, adaptar e construir sobre este projeto para uso pessoal e educacional, **mas não para fins comerciais**. Dê o devido crédito. Detalhes no arquivo [LICENSE](LICENSE).
 
 ## 📫 Contato
 
 - **Email:** cauaalvesbalbino@gmail.com
-- **Website:** [cauadev.vercel.app](https://cauadev.vercel.app)
+- **Website:** [portifolio-caua.vercel.app](https://portifolio-caua.vercel.app)
 - **GitHub:** [cauaprjct](https://github.com/cauaprjct)
-- **LinkedIn:** [caua-alves-dev](https://www.linkedin.com/in/caua-alves-dev/)
+- **LinkedIn:** [Cauã Alves](https://www.linkedin.com/in/caua-alves-0975a129b/)
 - **Freelancer:** [CauaAlves](https://www.freelancer.com/u/CauaAlves)
 
 ---
