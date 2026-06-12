@@ -5,26 +5,26 @@ export const metaData: Metadata = {
     openGraph: {
         type: "website",
         locale: "pt_BR",
-        siteName: "Cauã Alves - Desenvolvedor Full-Stack",
+        siteName: "Cauã Alves - Dados, BI & Automação",
         title:
-            "Cauã Alves | Desenvolvedor Full-Stack | Python, React, Next.js & Flutter",
+            "Cauã Alves | Dados, BI & Automação | Power BI · Azure · Python",
         description:
-            "Desenvolvedor Full-Stack focado em soluções práticas. Python para backend e automação, React/Next.js para web, Flutter para mobile. Avaliação 5.0⭐ em plataformas freelance. Entrego MVPs rápidos e soluções com IA.",
+            "Especialista em Dados, Business Intelligence e Automação. Power BI e DAX, pipelines e automações serverless no Azure e Python, automação web com Playwright. Clientes no Brasil, Reino Unido e Portugal com 100% de avaliação 5⭐.",
         images: [
             {
                 url: "/og-image.webp",
-                alt: "Cauã Alves | Desenvolvedor Full-Stack | Python, React, Next.js & Flutter",
+                alt: "Cauã Alves | Dados, BI & Automação | Power BI · Azure · Python",
                 height: 630,
                 width: 1200,
             },
         ],
     },
     title:
-        "Cauã Alves | Desenvolvedor Full-Stack | Python, React, Next.js & Flutter",
+        "Cauã Alves | Dados, BI & Automação | Power BI · Azure · Python",
     description:
-        "Desenvolvedor Full-Stack focado em soluções práticas. Python para backend e automação, React/Next.js para web, Flutter para mobile. Avaliação 5.0⭐ em plataformas freelance. Entrego MVPs rápidos e soluções com IA.",
+        "Especialista em Dados, Business Intelligence e Automação. Power BI e DAX, pipelines e automações serverless no Azure e Python, automação web com Playwright. Clientes no Brasil, Reino Unido e Portugal com 100% de avaliação 5⭐.",
     keywords:
-        "Cauã Alves, Desenvolvedor Full-Stack, Flutter Developer, React Developer, Next.js Developer, Python Developer, TypeScript Developer, Mobile Development, Web Development, AI Automation, Freelancer, Brasil, Rio de Janeiro, Dart, JavaScript, TailwindCSS, PostgreSQL, MongoDB, Firebase, Vercel, Git, OpenAI",
+        "Cauã Alves, Dados, Business Intelligence, BI, Power BI, DAX, Azure, Python, Engenharia de Dados, Automação, Automação Web, Playwright, SQL, PostgreSQL, FastAPI, Data Pipeline, ETL, Dashboards, Kotlin, Jetpack Compose, LLM, OpenAI, Anthropic, Gemini, Freelancer, Brasil, Rio de Janeiro",
     robots:
         "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
     icons: {

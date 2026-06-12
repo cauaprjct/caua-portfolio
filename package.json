@@ -6,7 +6,7 @@
     "name": "Cauã Alves",
     "github": "https://github.com/cauaprjct",
     "website": "https://cauadev.vercel.app",
-    "email": "contato@cauadev.com"
+    "email": "cauaalvesbalbino@gmail.com"
   },
   "scripts": {
     "dev": "next dev --turbopack",

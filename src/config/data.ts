@@ -1,6 +1,15 @@
 import { FaReact, FaNodeJs, FaGitAlt, FaPython } from "react-icons/fa";
-import { FiCpu, FiHeadphones, FiMonitor, FiCode } from "react-icons/fi";
+import {
+  FiCpu,
+  FiHeadphones,
+  FiMonitor,
+  FiCode,
+  FiBarChart2,
+  FiDatabase,
+  FiZap,
+} from "react-icons/fi";
 import { HiOutlineDesktopComputer } from "react-icons/hi";
+import { TbBrandAzure } from "react-icons/tb";
 import {
   SiNextdotjs,
   SiTypescript,
@@ -18,6 +27,13 @@ import {
   SiVite,
   SiOpenai,
   SiFastapi,
+  SiKotlin,
+  SiStreamlit,
+  SiPandas,
+  SiScikitlearn,
+  SiGooglegemini,
+  SiDocker,
+  SiMysql,
 } from "react-icons/si";
 
 export const socialLinks = [
@@ -43,12 +59,11 @@ export const socialLinks = [
 
 export const personalInfo = {
   name: "Cauã Alves",
-  title: "Desenvolvedor Full-Stack | Python, React, Next.js & Flutter",
-  email: "contato@cauadev.com",
-  email2: "cauaalvesbalbino@gmail.com",
+  title: "Dados, BI & Automação | Power BI · Azure · Python",
+  email: "cauaalvesbalbino@gmail.com",
   location: "Rio de Janeiro, Brasil",
   description:
-    "Dev Full Stack focado em soluções práticas. Trabalho com Python para backend e automação, React/Next.js para web e Flutter para mobile. Uso ferramentas de IA para acelerar o desenvolvimento e entregar resultados rápidos. Atuando como freelancer desde 2023 com avaliação 5.0⭐. Transformo ideias em produtos funcionais — do MVP ao deploy.",
+    "Trabalho com Dados, Business Intelligence e Automação — transformo dados brutos e processos manuais em sistemas confiáveis que rodam sozinhos. Power BI (dashboards executivos e modelagem DAX, com distribuição automática por e-mail), pipelines e automações serverless no Azure (Functions, Storage) e Python, além de automação web com Playwright. Também atuo com apps Android nativos (Kotlin/Jetpack Compose) e integração de LLMs (OpenAI, Anthropic, Gemini). Desde 2023 entrego para clientes no Brasil, Reino Unido e Portugal, com 100% de avaliação 5⭐.",
 };
 
 export const heroSection = {
@@ -58,84 +73,143 @@ export const heroSection = {
 
 export const workExperience = [
   {
-    company: "CauaDev Solutions",
-    position: "Desenvolvedor Full Stack",
-    period: "Janeiro 2017 - Presente",
+    company: "Independente / Freelancer.com",
+    position: "Desenvolvedor Freelancer de Dados & Automação",
+    period: "Janeiro 2023 - Presente",
     shortDesc:
-      "Desenvolvimento de soluções web e mobile para clientes nacionais e internacionais, com foco em automação, aplicações com IA e entrega rápida.",
+      "Soluções de dados e automação para clientes no Brasil, Reino Unido e Portugal: relatórios Power BI, automação no Azure e pipelines em Python. 100% de projetos concluídos e todas as avaliações 5⭐ (US$28/h).",
     bulletPoints: [
-      "Desenvolvimento de aplicações web com React, Next.js e TypeScript",
-      "Criação de apps mobile com Flutter e Dart",
-      "Automação de processos e bots com Python",
-      "Integração com APIs de IA (OpenAI, Google Gemini, Hugging Face)",
-      "Entrega de MVPs rápidos e soluções sob medida para clientes",
-      "Suporte e manutenção contínua de projetos entregues",
+      "Relatórios automatizados de telefonia em Power BI (UK, 47 colaboradores) com envio agendado por e-mail",
+      "Pipeline serverless no Azure para extração de metadados de Power BI (Functions, Storage Queues, VMs)",
+      "Modelagem e medidas DAX, com distribuição de dashboards sem trabalho manual nem licenças extras",
+      "Processamento e tratamento de dados históricos de Forex em Python",
+      "Automação de backend B2B em Portugal e integrações via API",
+      "Documentação clara e entrega organizada, para o cliente operar tudo sozinho",
     ],
   },
   {
-    company: "Freelancer Internacional",
-    position: "Desenvolvedor Full-Stack",
-    period: "2019 - Presente",
+    company: "Projetos próprios (open source)",
+    position: "Desenvolvedor de Soluções de IA & Automação",
+    period: "2025 - Presente",
     shortDesc:
-      "Atuação em plataformas globais como Freelancer.com, com avaliação 5.0⭐. Especializado em entregar soluções completas com foco em resultados.",
+      "Desenvolvimento de ferramentas de dados, IA e automação publicadas no GitHub, integrando LLMs e engenharia de dados a casos de uso reais.",
     bulletPoints: [
-      "Desenvolvimento de dashboards e plataformas web com React/Node.js",
-      "Criação de aplicativos mobile com Flutter",
-      "Automação de processos empresariais com Python e IA",
-      "Integração com APIs RESTful e serviços de terceiros",
-      "Comunicação proativa e entrega dentro do prazo combinado",
+      "Agente RAG sobre documentos financeiros da B3 com retrieval híbrido (denso + BM25 + RRF)",
+      "Dashboards de análise de ações com Machine Learning (Streamlit + Python)",
+      "Análise de planilhas Excel/CSV com IA e chat em português",
+      "Apps Android nativos em Kotlin/Jetpack Compose com captura e exportação de dados",
+      "Integração de LLMs (OpenAI, Anthropic, Gemini) e backend em FastAPI",
     ],
   },
 ];
 
 export const techStack = [
+  // === DATA & BI ===
+  { name: "Power BI", icon: FiBarChart2, color: "text-yellow-400", type: "Dados & BI" },
+  { name: "DAX", icon: FiCode, color: "text-yellow-300", type: "Dados & BI" },
+  { name: "SQL", icon: FiDatabase, color: "text-sky-400", type: "Dados & BI" },
+  { name: "Pandas", icon: SiPandas, color: "text-indigo-400", type: "Dados & BI" },
+  { name: "Streamlit", icon: SiStreamlit, color: "text-red-400", type: "Dados & BI" },
+
+  // === CLOUD & AUTOMATION ===
+  { name: "Azure", icon: TbBrandAzure, color: "text-blue-500", type: "Cloud & Automação" },
+  { name: "Playwright", icon: FiZap, color: "text-green-400", type: "Cloud & Automação" },
+  { name: "Docker", icon: SiDocker, color: "text-blue-400", type: "Cloud & Automação" },
+
+  // === LANGUAGES ===
+  { name: "Python", icon: FaPython, color: "text-blue-400", type: "Languages" },
+  { name: "TypeScript", icon: SiTypescript, color: "text-blue-500", type: "Languages" },
+  { name: "JavaScript", icon: SiJavascript, color: "text-yellow-400", type: "Languages" },
+
   // === MOBILE DEVELOPMENT ===
+  { name: "Kotlin", icon: SiKotlin, color: "text-purple-400", type: "Mobile" },
   { name: "Flutter", icon: SiFlutter, color: "text-blue-400", type: "Mobile" },
   { name: "Dart", icon: SiDart, color: "text-blue-600", type: "Mobile" },
 
-  // === FRONTEND FRAMEWORKS ===
-  { name: "React", icon: FaReact, color: "text-blue-400", type: "Frontend" },
-  { name: "Next.js", icon: SiNextdotjs, color: "text-white", type: "Frontend" },
-
-  // === LANGUAGES ===
-  { name: "TypeScript", icon: SiTypescript, color: "text-blue-500", type: "Languages" },
-  { name: "JavaScript", icon: SiJavascript, color: "text-yellow-400", type: "Languages" },
-  { name: "Python", icon: FaPython, color: "text-blue-400", type: "Languages" },
-
-  // === STYLING & UI ===
-  { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-cyan-400", type: "Styling" },
-  { name: "HTML5", icon: SiHtml5, color: "text-orange-500", type: "Styling" },
-  { name: "CSS3", icon: SiCss3, color: "text-blue-500", type: "Styling" },
-
-  // === BACKEND FRAMEWORKS ===
+  // === BACKEND ===
+  { name: "FastAPI", icon: SiFastapi, color: "text-teal-500", type: "Backend" },
   { name: "Node.js", icon: FaNodeJs, color: "text-green-500", type: "Backend" },
   { name: "Express", icon: SiExpress, color: "text-gray-400", type: "Backend" },
-  { name: "FastAPI", icon: SiFastapi, color: "text-teal-500", type: "Backend" },
 
   // === DATABASES ===
   { name: "PostgreSQL", icon: SiPostgresql, color: "text-blue-400", type: "Database" },
+  { name: "MySQL", icon: SiMysql, color: "text-sky-500", type: "Database" },
   { name: "MongoDB", icon: SiMongodb, color: "text-green-500", type: "Database" },
   { name: "Firebase", icon: SiFirebase, color: "text-yellow-500", type: "Database" },
 
-  // === AI & APIs ===
+  // === AI & LLMs ===
   { name: "OpenAI API", icon: SiOpenai, color: "text-green-400", type: "AI/ML" },
+  { name: "Google Gemini", icon: SiGooglegemini, color: "text-blue-400", type: "AI/ML" },
+  { name: "scikit-learn", icon: SiScikitlearn, color: "text-orange-400", type: "AI/ML" },
 
-  // === BUILD TOOLS ===
-  { name: "Vite", icon: SiVite, color: "text-purple-500", type: "Build" },
+  // === FRONTEND ===
+  { name: "React", icon: FaReact, color: "text-blue-400", type: "Frontend" },
+  { name: "Next.js", icon: SiNextdotjs, color: "text-white", type: "Frontend" },
+  { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-cyan-400", type: "Frontend" },
+  { name: "HTML5", icon: SiHtml5, color: "text-orange-500", type: "Frontend" },
+  { name: "CSS3", icon: SiCss3, color: "text-blue-500", type: "Frontend" },
 
-  // === CLOUD & DEPLOY ===
-  { name: "Vercel", icon: SiVercel, color: "text-white", type: "Cloud" },
-
-  // === VERSION CONTROL ===
+  // === TOOLS & DEPLOY ===
+  { name: "Vite", icon: SiVite, color: "text-purple-500", type: "Tools" },
+  { name: "Vercel", icon: SiVercel, color: "text-white", type: "Tools" },
   { name: "Git", icon: FaGitAlt, color: "text-orange-500", type: "Tools" },
 ];
 
 export const projects = [
   {
+    title: "RAG Financeiro B3",
+    description:
+      "Agente RAG de perguntas e respostas sobre documentos financeiros da B3 (PDFs), com citações por documento e página. Retrieval híbrido (denso + BM25 + RRF) e interface em Streamlit. Foco em precisão e rastreabilidade das respostas.",
+    liveUrl: "https://github.com/cauaprjct/rag-financeiro-b3",
+    githubUrl: "https://github.com/cauaprjct/rag-financeiro-b3",
+    techStack: techStack.filter((item) =>
+      ["Python", "Streamlit", "Google Gemini"].includes(item.name)
+    ),
+  },
+  {
+    title: "Trading Bot Pro",
+    description:
+      "Sistema de trading algorítmico com Ensemble de Machine Learning (LightGBM + LSTM) para Forex. Scalper multi-ativo com Smart Money Concepts, backtesting e integração com MetaTrader 5.",
+    liveUrl: "https://github.com/cauaprjct/trading-bot-pro",
+    githubUrl: "https://github.com/cauaprjct/trading-bot-pro",
+    techStack: techStack.filter((item) =>
+      ["Python", "scikit-learn", "Pandas"].includes(item.name)
+    ),
+  },
+  {
+    title: "StockAI Brasil",
+    description:
+      "Dashboard interativo de análise de ações da B3 com previsões de Machine Learning. Visualização de dados financeiros, modelos preditivos e interface intuitiva em Streamlit para acompanhamento do mercado brasileiro.",
+    liveUrl: "https://github.com/cauaprjct/stockai-brasil",
+    githubUrl: "https://github.com/cauaprjct/stockai-brasil",
+    techStack: techStack.filter((item) =>
+      ["Python", "Streamlit", "Pandas"].includes(item.name)
+    ),
+  },
+  {
+    title: "ExcelMind AI",
+    description:
+      "Ferramenta inteligente de análise de planilhas Excel/CSV com IA. Análise automática, gráficos interativos e chat em português sobre os dados. Ideal para extrair insights sem trabalho manual.",
+    liveUrl: "https://github.com/cauaprjct/excelmind-ai",
+    githubUrl: "https://github.com/cauaprjct/excelmind-ai",
+    techStack: techStack.filter((item) =>
+      ["Python", "Pandas"].includes(item.name)
+    ),
+  },
+  {
+    title: "Beemo",
+    description:
+      "Assistente de IA para arquivos Office com Google Gemini. Manipula Excel, Word, PowerPoint e PDF a partir de comandos em linguagem natural, automatizando tarefas repetitivas de documentação.",
+    liveUrl: "https://github.com/cauaprjct/beemo",
+    githubUrl: "https://github.com/cauaprjct/beemo",
+    techStack: techStack.filter((item) =>
+      ["Python", "Google Gemini"].includes(item.name)
+    ),
+  },
+  {
     title: "SocialBot AI",
     description:
-      "Bot de automação para redes sociais com inteligência artificial. Publica automaticamente no Twitter, Instagram e LinkedIn usando OpenAI e Hugging Face. Inclui agendamento inteligente, análise de engajamento e arquitetura modular.",
-    image: "/images/projects/free-ai-hub.webp",
+      "Bot de automação para redes sociais com IA. Publica automaticamente no Twitter, Instagram e LinkedIn usando OpenAI e Hugging Face. Arquitetura robusta com Circuit Breaker, métricas Prometheus e connection pooling.",
     liveUrl: "https://github.com/cauaprjct/socialbot-ai",
     githubUrl: "https://github.com/cauaprjct/socialbot-ai",
     techStack: techStack.filter((item) =>
@@ -143,21 +217,9 @@ export const projects = [
     ),
   },
   {
-    title: "Beemo",
-    description:
-      "Assistente de IA para arquivos Office usando Google Gemini. Processa e analisa documentos do Microsoft Office automaticamente, extraindo insights e automatizando tarefas repetitivas de documentação.",
-    image: "/images/projects/snaploom.webp",
-    liveUrl: "https://github.com/cauaprjct/beemo",
-    githubUrl: "https://github.com/cauaprjct/beemo",
-    techStack: techStack.filter((item) =>
-      ["Python"].includes(item.name)
-    ),
-  },
-  {
     title: "Nero Discord Bot",
     description:
-      "Bot Discord modular e multi-tenant com integração de IA (Gemini 2.0) e monitoramento. Sistema extensível com comandos personalizados, automação de servidores e respostas inteligentes em tempo real.",
-    image: "/images/projects/free-games-hub.webp",
+      "Bot Discord modular e multi-tenant com integração de IA (Gemini 2.0), loja automatizada, sistema de organizações e monitoramento completo. Comandos personalizados e respostas inteligentes em tempo real.",
     liveUrl: "https://github.com/cauaprjct/nero-discord-bot",
     githubUrl: "https://github.com/cauaprjct/nero-discord-bot",
     techStack: techStack.filter((item) =>
@@ -167,8 +229,7 @@ export const projects = [
   {
     title: "VoiceScribe",
     description:
-      "Aplicativo Flutter de transcrição de áudio com IA. Converte áudio em texto com alta precisão, ideal para reuniões, aulas e entrevistas. Interface limpa e suporte a múltiplos idiomas.",
-    image: "/images/projects/coin-echo.webp",
+      "Aplicativo Flutter de transcrição de áudio com IA. Grava, transcreve e exporta em TXT/PDF com alta precisão. Ideal para reuniões, aulas e entrevistas, com interface limpa e responsiva.",
     liveUrl: "https://github.com/cauaprjct/voicescribe",
     githubUrl: "https://github.com/cauaprjct/voicescribe",
     techStack: techStack.filter((item) =>
@@ -176,47 +237,23 @@ export const projects = [
     ),
   },
   {
-    title: "StockAI Brasil",
+    title: "SmartDocs Pro",
     description:
-      "Dashboard interativo de análise de ações da B3 com Machine Learning. Visualização de dados financeiros, predições baseadas em modelos de ML e interface intuitiva para acompanhamento do mercado brasileiro.",
-    image: "/images/projects/free-ai-hub.webp",
-    liveUrl: "https://github.com/cauaprjct/stockai-brasil",
-    githubUrl: "https://github.com/cauaprjct/stockai-brasil",
+      "App Android de captura de documentos pela câmera, extração de dados estruturados e exportação para Excel/PDF. Desenvolvido em Kotlin com Jetpack Compose.",
+    liveUrl: "https://github.com/cauaprjct/smartdocs-android",
+    githubUrl: "https://github.com/cauaprjct/smartdocs-android",
     techStack: techStack.filter((item) =>
-      ["Python", "FastAPI"].includes(item.name)
+      ["Kotlin"].includes(item.name)
     ),
   },
   {
-    title: "Generative Py",
+    title: "Social Down",
     description:
-      "Arte generativa com Python — sem IA, apenas matemática. Gera fractais e padrões matemáticos visualmente impressionantes. Exploração de algoritmos matemáticos para criação artística computacional.",
-    image: "/images/projects/snaploom.webp",
-    liveUrl: "https://github.com/cauaprjct/generative-py",
-    githubUrl: "https://github.com/cauaprjct/generative-py",
+      "Aplicação web para baixar vídeos do TikTok, Instagram, YouTube e Facebook gratuitamente. Interface moderna construída com Next.js e TypeScript, com deploy na Vercel.",
+    liveUrl: "https://social-down.vercel.app/",
+    githubUrl: "https://github.com/cauaprjct/social-down",
     techStack: techStack.filter((item) =>
-      ["Python"].includes(item.name)
-    ),
-  },
-  {
-    title: "Dashboard Analytics Empresarial",
-    description:
-      "Plataforma de analytics desenvolvida para cliente internacional. Painéis interativos, visualização de métricas em tempo real e relatórios automatizados. Projeto freelancer entregue com React e Node.js.",
-    image: "/images/projects/coin-echo.webp",
-    liveUrl: "#",
-    githubUrl: "",
-    techStack: techStack.filter((item) =>
-      ["React", "Next.js", "Node.js", "TypeScript"].includes(item.name)
-    ),
-  },
-  {
-    title: "App de Fitness",
-    description:
-      "Aplicativo mobile de fitness e saúde desenvolvido com Flutter. Rastreamento de exercícios, monitoramento de calorias e planos personalizados. Projeto freelancer entregue para cliente do setor de wellness.",
-    image: "/images/projects/free-games-hub.webp",
-    liveUrl: "#",
-    githubUrl: "",
-    techStack: techStack.filter((item) =>
-      ["Flutter", "Dart", "Firebase"].includes(item.name)
+      ["TypeScript", "Next.js", "Tailwind CSS"].includes(item.name)
     ),
   },
 ];
@@ -246,29 +283,38 @@ export const setupSpecs = [
 
 export const testimonials = [
   {
+    name: "James P.",
+    company: "Freelancer.com",
+    linkedIn: "https://www.freelancer.com/projects/power-bi/Power-Telephony-Reporting-Setup",
+    position: "Power BI Telephony Reporting Setup (£135 GBP)",
+    avatar: "",
+    testimonial:
+      "Will be using again very soon as work was excellent and communication plus feedback both above expectations.",
+  },
+  {
     name: "Brendan O.",
     company: "Freelancer.com",
-    linkedIn: "https://www.freelancer.com/u/CauaAlves",
-    position: "Forex Market Research: Historical Data",
-    avatar: "/images/testimonials/vikshak.webp",
+    linkedIn: "https://www.freelancer.com/projects/data-analysis/Forex-Market-Research-Historical-Data",
+    position: "Forex Market Research: Historical Data ($20 USD)",
+    avatar: "",
     testimonial:
       "Was a great working with Caua, he understood the task and got on with delivering an excellent solution.",
   },
   {
     name: "Mariano S.",
     company: "Freelancer.com",
-    linkedIn: "https://www.freelancer.com/u/CauaAlves",
-    position: "DMV Query Extraction in DAX Studio",
-    avatar: "/images/testimonials/shwetank.webp",
+    linkedIn: "https://www.freelancer.com/projects/automation/DMV-Query-Extraction-DAX-Studio",
+    position: "DMV Query Extraction in DAX Studio ($290 USD)",
+    avatar: "",
     testimonial:
       "Highly recommended! Responsible, fast.",
   },
   {
     name: "Maria O.",
     company: "Freelancer.com",
-    linkedIn: "https://www.freelancer.com/u/CauaAlves",
-    position: "Análise de Mercado + Sistema Digital (Portugal)",
-    avatar: "/images/testimonials/vikshak.webp",
+    linkedIn: "https://www.freelancer.com/projects/api-developmet/lise-Mercado-Sistema-Digital-Portugal",
+    position: "Análise de Mercado + Sistema Digital, Portugal (€150 EUR)",
+    avatar: "",
     testimonial:
       "Excelente profissional. Recomendo.",
   },

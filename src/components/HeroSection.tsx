@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { FiCalendar, FiMapPin } from "react-icons/fi";
 import { FaGithub, FaInstagram, FaLinkedinIn, FaBriefcase } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
@@ -39,12 +38,6 @@ export function HeroSection() {
         transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
         className="flex flex-col items-center lg:items-start"
       >
-        <Avatar className="w-42 h-42 mb-6 ring-2 ring-gray-800">
-          <AvatarFallback className="text-3xl font-semibold bg-gray-800">
-            CA
-          </AvatarFallback>
-        </Avatar>
-
         <motion.div
           initial={{ opacity: 0, y: 5 }}
           animate={{ opacity: 1, y: 0 }}
@@ -84,22 +77,6 @@ export function HeroSection() {
         transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
         className="flex-1 text-center lg:text-left"
       >
-        <div className="flex justify-center lg:justify-start items-center gap-4 mb-6">
-          <motion.div
-            whileHover={{ scale: 1.02, y: -1 }}
-            whileTap={{ scale: 0.98 }}
-            transition={{ duration: 0.2, ease: "easeOut" }}
-          >
-            <a
-              className="flex items-center border border-blue-700/50 text-blue-300 hover:bg-blue-900/30 transition-all duration-300 py-2 px-4 rounded-sm"
-              href={`mailto:${heroSection.personalInfo.email}`}
-            >
-              <FiCalendar className="w-4 h-4 mr-2" />
-              <span>Agendar uma call</span>
-            </a>
-          </motion.div>
-        </div>
-
         <motion.h1
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}

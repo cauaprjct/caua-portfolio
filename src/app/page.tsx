@@ -17,10 +17,6 @@ export default function Portfolio() {
         <HeroSection />
       </FadeInUp>
 
-      <FadeInUp delay={0.6}>
-        <MySetup />
-      </FadeInUp>
-
       <FadeInUp delay={0.4}>
         <WorkExperience />
       </FadeInUp>
@@ -39,6 +35,10 @@ export default function Portfolio() {
 
       <FadeInUp delay={1.0}>
         <Testimonials />
+      </FadeInUp>
+
+      <FadeInUp delay={1.2}>
+        <MySetup />
       </FadeInUp>
 
       <FadeInUp delay={1.4}>

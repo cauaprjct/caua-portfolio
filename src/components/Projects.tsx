@@ -2,7 +2,6 @@
 
 import { projects } from "@/config/data";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { FiCode, FiExternalLink, FiGithub } from "react-icons/fi";
 
 export function Projects() {
@@ -49,15 +48,6 @@ export function Projects() {
             whileHover={{ scale: 1.01, y: -2 }}
             className="rounded-xl overflow-hidden transition-all duration-500 ease-out border border-blue-500/30"
           >
-            <div className="aspect-video bg-gray-800 overflow-hidden">
-              <Image
-                src={project.image}
-                alt={project.title}
-                width={400}
-                height={300}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-              />
-            </div>
             <div className="p-6">
               <div className="flex  items-center justify-between mb-3">
                 <h3 className="text-xl font-bold text-white">

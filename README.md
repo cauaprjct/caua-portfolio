@@ -71,7 +71,7 @@ Open an issue or submit a pull request to improve the portfolio.
 
 ## 📫 Contato
 
-- **Email:** contato@cauadev.com
+- **Email:** cauaalvesbalbino@gmail.com
 - **Website:** [cauadev.vercel.app](https://cauadev.vercel.app)
 - **GitHub:** [cauaprjct](https://github.com/cauaprjct)
 - **LinkedIn:** [caua-alves-dev](https://www.linkedin.com/in/caua-alves-dev/)

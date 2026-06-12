@@ -71,15 +71,6 @@ export function CallToAction() {
             <span>{personalInfo.email}</span>
           </a>
         </motion.div>
-        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-          <a
-            className="flex items-center border border-blue-700/50 text-blue-300 hover:bg-blue-900/30 transition-all duration-300 py-2 px-4 rounded-sm"
-            href={`mailto:${(personalInfo as any).email2}`}
-          >
-            <FiMail className="w-5 h-5 mr-2" />
-            <span>{(personalInfo as any).email2}</span>
-          </a>
-        </motion.div>
       </motion.div>
     </motion.div>
   );
