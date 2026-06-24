@@ -5,6 +5,7 @@ export const metaData: Metadata = {
     openGraph: {
         type: "website",
         locale: "pt_BR",
+        url: "/",
         siteName: "Cauã Alves - Dados, BI & Automação",
         title:
             "Cauã Alves | Dados, BI & Automação | Power BI · Azure · Python",
