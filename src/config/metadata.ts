@@ -19,8 +19,11 @@ export const metaData: Metadata = {
             },
         ],
     },
-    title:
-        "Cauã Alves | Dados, BI & Automação | Power BI · Azure · Python",
+    title: {
+        default:
+            "Cauã Alves | Dados, BI & Automação | Power BI · Azure · Python",
+        template: "%s | Cauã Alves",
+    },
     description:
         "Especialista em Dados, Business Intelligence e Automação. Power BI e DAX, pipelines e automações serverless no Azure e Python, automação web com Playwright. Clientes no Brasil, Reino Unido e Portugal com 100% de avaliação 5⭐.",
     alternates: {
