@@ -50,4 +50,7 @@ export const metaData: Metadata = {
         name: "Cauã Alves",
         url: "https://github.com/cauaprjct",
     },
+    verification: {
+        google: "VUsyG2R1mzIILpbxCvjmwZ18_KVzhCD5SojAHUeGxx8",
+    },
 };
