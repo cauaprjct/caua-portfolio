@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FiCalendar, FiMapPin } from "react-icons/fi";
+import { FiMapPin } from "react-icons/fi";
 import { FaGithub, FaInstagram, FaLinkedinIn, FaBriefcase } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { heroSection } from "@/config/data";
@@ -9,22 +9,22 @@ import { heroSection } from "@/config/data";
 function getSocialIcon(title: string) {
   switch (title) {
     case "GitHub":
-      return <FaGithub className="w-8 h-8 text-gray-200 hover:text-gray-500" />;
+      return <FaGithub aria-hidden className="w-8 h-8 text-gray-200 hover:text-gray-500" />;
     case "Twitter":
       return (
-        <FaSquareXTwitter className="w-8 h-8 text-gray-200 hover:text-gray-500" />
+        <FaSquareXTwitter aria-hidden className="w-8 h-8 text-gray-200 hover:text-gray-500" />
       );
     case "Instagram":
       return (
-        <FaInstagram className="w-8 h-8 text-pink-500 hover:text-pink-700" />
+        <FaInstagram aria-hidden className="w-8 h-8 text-pink-500 hover:text-pink-700" />
       );
     case "Freelancer":
       return (
-        <FaBriefcase className="w-8 h-8 text-emerald-400 hover:text-emerald-600" />
+        <FaBriefcase aria-hidden className="w-8 h-8 text-emerald-400 hover:text-emerald-600" />
       );
     default:
       return (
-        <FaLinkedinIn className="w-8 h-8 text-blue-500 hover:text-blue-700" />
+        <FaLinkedinIn aria-hidden className="w-8 h-8 text-blue-500 hover:text-blue-700" />
       );
   }
 }
@@ -44,7 +44,7 @@ export function HeroSection() {
           transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
           className="flex items-center gap-2 text-sm text-gray-400 mb-4"
         >
-          <FiMapPin className="w-4 h-4" />
+          <FiMapPin aria-hidden className="w-4 h-4" />
           {heroSection.personalInfo.location}
         </motion.div>
 
@@ -58,6 +58,7 @@ export function HeroSection() {
             <motion.a
               key={title}
               title={title}
+              aria-label={`Perfil no ${title}`}
               initial={{ x: 5, scale: 0.2 }}
               animate={{ x: 0, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.3 }}

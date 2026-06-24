@@ -33,8 +33,8 @@ Este portfólio é o meu site profissional, com foco em **Dados, Business Intell
 Clone o repositório:
 
 ```bash
-git clone https://github.com/cauaprjct/cauadev-portfolio.git
-cd cauadev-portfolio
+git clone https://github.com/cauaprjct/caua-portfolio.git
+cd caua-portfolio
 ```
 
 Instale as dependências:

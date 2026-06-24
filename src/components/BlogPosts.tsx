@@ -35,17 +35,15 @@ export function BlogPosts() {
     <section className="mb-16">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        viewport={{ once: true }}
         className="mb-12"
       >
         <div className="flex items-center gap-4 mb-4">
           <motion.div
             initial={{ scale: 0, rotate: -180 }}
-            whileInView={{ scale: 1, rotate: 0 }}
+            animate={{ scale: 1, rotate: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            viewport={{ once: true }}
             className="p-3 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl border border-blue-500/30"
           >
             <FaPenFancy className="w-6 h-6 text-blue-400" />
@@ -61,9 +59,8 @@ export function BlogPosts() {
         </div>
         <motion.div
           initial={{ width: 0 }}
-          whileInView={{ width: "100%" }}
+          animate={{ width: "100%" }}
           transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
-          viewport={{ once: true }}
           className="h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"
         />
       </motion.div>
@@ -73,9 +70,8 @@ export function BlogPosts() {
           <Link href={`/blog/${post.slug}`} key={index} className="group block h-full">
             <motion.article
               initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0, ease: "easeOut" }}
               whileHover={{ y: -8 }}
               className="h-full bg-gray-900/30 rounded-2xl overflow-hidden hover:bg-gray-800/40 transition-colors duration-500 border border-gray-700/30 hover:border-cyan-500/40 relative"
             >

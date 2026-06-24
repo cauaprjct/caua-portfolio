@@ -1,18 +1,18 @@
 {
-  "name": "cauadev_portfolio",
+  "name": "caua-portfolio",
   "version": "2.0.0",
   "private": true,
   "author": {
     "name": "Cauã Alves",
     "github": "https://github.com/cauaprjct",
-    "website": "https://cauadev.vercel.app",
+    "website": "https://portifolio-caua.vercel.app",
     "email": "cauaalvesbalbino@gmail.com"
   },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@next/third-parties": "^16.1.6",

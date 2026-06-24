@@ -10,17 +10,15 @@ export function Testimonials() {
     <div className="mb-16">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        viewport={{ once: true }}
         className="mb-12"
       >
         <div className="flex items-center gap-4 mb-4">
           <motion.div
             initial={{ scale: 0, rotate: -180 }}
-            whileInView={{ scale: 1, rotate: 0 }}
+            animate={{ scale: 1, rotate: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            viewport={{ once: true }}
             className="p-3 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl border border-blue-500/30"
           >
             <FaQuoteLeft className="w-6 h-6 text-blue-400" />
@@ -31,9 +29,8 @@ export function Testimonials() {
         </div>
         <motion.div
           initial={{ width: 0 }}
-          whileInView={{ width: "100%" }}
+          animate={{ width: "100%" }}
           transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
-          viewport={{ once: true }}
           className="h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"
         />
       </motion.div>
@@ -43,9 +40,8 @@ export function Testimonials() {
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: index * 0.2, ease: "easeOut" }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0, ease: "easeOut" }}
             className="rounded-lg p-6 border border-blue-500/30"
           >
             <div className="flex items-center gap-4 mb-4">
@@ -74,7 +70,7 @@ export function Testimonials() {
               </div>
             </div>
             <p className="text-gray-300 ">
-              "{testimonial.testimonial}"
+              &ldquo;{testimonial.testimonial}&rdquo;
             </p>
           </motion.div>
         ))}
