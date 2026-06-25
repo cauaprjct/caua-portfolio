@@ -49,10 +49,10 @@ export function BlogPosts() {
             <FaPenFancy className="w-6 h-6 text-blue-400" />
           </motion.div>
           <div>
-            <h2 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-300 bg-clip-text text-transparent">
+            <h2 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-gray-900 via-blue-600 to-cyan-600 dark:from-white dark:via-blue-100 dark:to-cyan-300 bg-clip-text text-transparent">
               Artigos Recentes
             </h2>
-            <p className="text-gray-400 text-sm mt-1">
+            <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">
               {blogPosts.length} artigos técnicos sobre desenvolvimento, automação e tecnologias modernas
             </p>
           </div>
@@ -73,7 +73,7 @@ export function BlogPosts() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0, ease: "easeOut" }}
               whileHover={{ y: -8 }}
-              className="h-full bg-gray-900/30 rounded-2xl overflow-hidden hover:bg-gray-800/40 transition-colors duration-500 border border-gray-700/30 hover:border-cyan-500/40 relative"
+              className="h-full bg-black/[0.03] dark:bg-gray-900/30 rounded-2xl overflow-hidden hover:bg-black/[0.05] dark:hover:bg-gray-800/40 transition-colors duration-500 border border-black/10 dark:border-gray-700/30 hover:border-cyan-500/40 relative"
             >
               {/* Glow effect on hover */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
@@ -98,11 +98,11 @@ export function BlogPosts() {
                 {/* Meta row */}
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-3">
-                    <div className="flex items-center gap-1.5 text-gray-400">
+                    <div className="flex items-center gap-1.5 text-gray-600 dark:text-gray-400">
                       <FiCalendar className="w-3.5 h-3.5" />
                       <span className="text-xs">{post.date}</span>
                     </div>
-                    <div className="flex items-center gap-1.5 text-gray-400">
+                    <div className="flex items-center gap-1.5 text-gray-600 dark:text-gray-400">
                       <FiClock className="w-3.5 h-3.5" />
                       <span className="text-xs">{post.readTime}</span>
                     </div>
@@ -113,7 +113,7 @@ export function BlogPosts() {
                 </div>
 
                 {/* Description */}
-                <p className="text-gray-300 mb-5 leading-relaxed text-sm line-clamp-4">
+                <p className="text-gray-700 dark:text-gray-300 mb-5 leading-relaxed text-sm line-clamp-4">
                   {post.description}
                 </p>
 

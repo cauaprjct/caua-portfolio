@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { ThemeToggle } from "./ThemeToggle";
 export function Header() {
   const [time, setTime] = useState("");
 
@@ -33,6 +34,7 @@ export function Header() {
         >
           {time}
         </div>
+        <ThemeToggle />
       </nav>
     </motion.header>
   );

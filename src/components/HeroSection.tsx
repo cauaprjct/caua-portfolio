@@ -9,10 +9,10 @@ import { heroSection } from "@/config/data";
 function getSocialIcon(title: string) {
   switch (title) {
     case "GitHub":
-      return <FaGithub aria-hidden className="w-8 h-8 text-gray-200 hover:text-gray-500" />;
+      return <FaGithub aria-hidden className="w-8 h-8 text-gray-700 dark:text-gray-200 hover:text-gray-500" />;
     case "Twitter":
       return (
-        <FaSquareXTwitter aria-hidden className="w-8 h-8 text-gray-200 hover:text-gray-500" />
+        <FaSquareXTwitter aria-hidden className="w-8 h-8 text-gray-700 dark:text-gray-200 hover:text-gray-500" />
       );
     case "Instagram":
       return (
@@ -42,7 +42,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 5 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-          className="flex items-center gap-2 text-sm text-gray-400 mb-4"
+          className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 mb-4"
         >
           <FiMapPin aria-hidden className="w-4 h-4" />
           {heroSection.personalInfo.location}
@@ -91,7 +91,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          className="text-xl text-gray-400 mb-5"
+          className="text-xl text-gray-600 dark:text-gray-400 mb-5"
         >
           {heroSection.personalInfo.title}
         </motion.p>
@@ -100,7 +100,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-          className="text-gray-300 leading-relaxed text-lg max-w-2xl"
+          className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg max-w-2xl"
         >
           {heroSection.personalInfo.description}
         </motion.p>

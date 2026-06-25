@@ -22,7 +22,7 @@ export function Projects() {
           >
             <FiCode className="w-6 h-6 text-blue-400" />
           </motion.div>
-          <h2 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-300 bg-clip-text text-transparent">
+          <h2 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-gray-900 via-blue-600 to-cyan-600 dark:from-white dark:via-blue-100 dark:to-cyan-300 bg-clip-text text-transparent">
             Projetos em Destaque
           </h2>
         </div>
@@ -46,7 +46,7 @@ export function Projects() {
           >
             <div className="p-6">
               <div className="flex  items-center justify-between mb-3">
-                <h3 className="text-xl font-bold text-white">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                   {project.title}
                 </h3>
                 <div className="flex items-center gap-2">
@@ -69,7 +69,7 @@ export function Projects() {
                   })}
                 </div>
               </div>
-              <p className="text-gray-300 mb-4 leading-relaxed line-clamp-3">
+              <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed line-clamp-3">
                 {project.description}
               </p>
 
@@ -92,7 +92,7 @@ export function Projects() {
                     whileTap={{ scale: 0.98 }}
                     transition={{ duration: 0.2, ease: "easeOut" }}
                     href={project.githubUrl}
-                    className="flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors duration-300 text-sm font-medium"
+                    className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-300 transition-colors duration-300 text-sm font-medium"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

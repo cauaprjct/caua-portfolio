@@ -17,7 +17,7 @@ export function ThemeToggle() {
     if (!mounted) {
         return (
             <button
-                className="relative inline-flex h-9 w-9 items-center justify-center rounded-md border border-gray-700/50 hover:bg-gray-800/50 focus:outline-none"
+                className="relative inline-flex h-9 w-9 items-center justify-center rounded-md border border-border/50 hover:bg-accent/50 focus:outline-none"
             >
                 <span className="sr-only">Toggle theme</span>
             </button>

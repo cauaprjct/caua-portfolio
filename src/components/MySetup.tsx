@@ -23,7 +23,7 @@ export function MySetup() {
           >
             <FiSettings className="w-6 h-6 text-blue-400" />
           </motion.div>
-          <h2 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-300 bg-clip-text text-transparent">
+          <h2 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-gray-900 via-blue-600 to-cyan-600 dark:from-white dark:via-blue-100 dark:to-cyan-300 bg-clip-text text-transparent">
             Where Ideas Come to Life
           </h2>
         </div>
@@ -107,7 +107,7 @@ export function MySetup() {
                     delay: 0,
                     ease: "easeOut",
                   }}
-                  className=" p-4 bg-gray-900/50 rounded-xl border border-blue-500/30 h-full"
+                  className=" p-4 bg-black/[0.03] dark:bg-gray-900/50 rounded-xl border border-blue-500/30 h-full"
                 >
                   <div className="flex flex-col items-center text-center space-y-3">
                     <motion.div
@@ -119,10 +119,10 @@ export function MySetup() {
                       <IconComponent className="w-6 h-6 text-blue-400 group-hover:text-cyan-300 transition-colors duration-300" />
                     </motion.div>
                     <div>
-                      <h3 className="font-semibold text-white mb-1 text-sm">
+                      <h3 className="font-semibold text-gray-900 dark:text-white mb-1 text-sm">
                         {spec.title}
                       </h3>
-                      <p className="text-xs text-gray-400 leading-relaxed">
+                      <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
                         {spec.subTitle}
                       </p>
                     </div>

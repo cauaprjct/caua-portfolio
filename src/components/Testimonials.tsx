@@ -23,7 +23,7 @@ export function Testimonials() {
           >
             <FaQuoteLeft className="w-6 h-6 text-blue-400" />
           </motion.div>
-          <h2 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-300 bg-clip-text text-transparent">
+          <h2 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-gray-900 via-blue-600 to-cyan-600 dark:from-white dark:via-blue-100 dark:to-cyan-300 bg-clip-text text-transparent">
             Depoimentos
           </h2>
         </div>
@@ -55,7 +55,7 @@ export function Testimonials() {
                 </AvatarFallback>
               </Avatar>
               <div>
-                <h3 className="font-semibold text-white text-lg leading-relaxed">
+                <h3 className="font-semibold text-gray-900 dark:text-white text-lg leading-relaxed">
                   <motion.a
                     whileHover={{ scale: 1.05 }}
                     href={testimonial.linkedIn}
@@ -69,7 +69,7 @@ export function Testimonials() {
                 <p className="text-sm">{testimonial.position} @{testimonial.company}</p>
               </div>
             </div>
-            <p className="text-gray-300 ">
+            <p className="text-gray-700 dark:text-gray-300 ">
               &ldquo;{testimonial.testimonial}&rdquo;
             </p>
           </motion.div>

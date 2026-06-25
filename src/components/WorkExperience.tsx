@@ -22,7 +22,7 @@ export function WorkExperience() {
           >
             <FiBriefcase className="w-6 h-6 text-blue-400" />
           </motion.div>
-          <h2 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-white via-blue-100 to-blue-300 bg-clip-text text-transparent">
+          <h2 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-gray-900 via-blue-600 to-blue-700 dark:from-white dark:via-blue-100 dark:to-blue-300 bg-clip-text text-transparent">
             Trajetória Profissional
           </h2>
         </div>
@@ -45,13 +45,13 @@ export function WorkExperience() {
           >
             <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-2">
               <div>
-                <h3 className="text-2xl font-bold text-white">{job.company}</h3>
-                <p className="text-blue-400 font-medium text-lg">{job.position}</p>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">{job.company}</h3>
+                <p className="text-blue-600 dark:text-blue-400 font-medium text-lg">{job.position}</p>
               </div>
-              <span className="text-gray-400">{job.period}</span>
+              <span className="text-gray-600 dark:text-gray-400">{job.period}</span>
             </div>
 
-            <p className="text-lg text-gray-200 mb-2">{job.shortDesc}</p>
+            <p className="text-lg text-gray-700 dark:text-gray-200 mb-2">{job.shortDesc}</p>
 
             <ul className="space-y-2 mb-8 pl-3">
               {job.bulletPoints.map((item, index) => (
@@ -60,7 +60,7 @@ export function WorkExperience() {
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.4, delay: 0, ease: "easeOut" }}
-                  className="flex items-start gap-3 text-gray-300 text-lg"
+                  className="flex items-start gap-3 text-gray-700 dark:text-gray-300 text-lg"
                 >
                   <motion.div
                     initial={{ scale: 0 }}

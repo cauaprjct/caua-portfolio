@@ -11,7 +11,7 @@ export function CallToAction() {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="text-center pb-16 bg-gray-900/20 rounded-2xl"
+      className="text-center pb-16 bg-black/[0.03] dark:bg-gray-900/20 rounded-2xl"
     >
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -28,7 +28,7 @@ export function CallToAction() {
           >
             <FaRocket className="w-6 h-6 text-blue-400" />
           </motion.div>
-          <h2 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-300 bg-clip-text text-transparent">
+          <h2 className="text-3xl lg:text-4xl font-bold bg-gradient-to-r from-gray-900 via-blue-600 to-cyan-600 dark:from-white dark:via-blue-100 dark:to-cyan-300 bg-clip-text text-transparent">
             Vamos Construir Algo Incrível
           </h2>
         </div>
@@ -44,7 +44,7 @@ export function CallToAction() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-        className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"
+        className="text-xl text-gray-700 dark:text-gray-300 mb-8 max-w-2xl mx-auto"
       >
         Pronto para transformar suas ideias em realidade? Estou sempre aberto a colaborar em
         projetos inovadores e ajudar a transformar sua visão em um produto funcional.
@@ -58,7 +58,7 @@ export function CallToAction() {
       >
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <a
-            className="flex items-center border border-blue-700/50 text-blue-300 hover:bg-blue-900/30 transition-all duration-300 py-2 px-4 rounded-sm"
+            className="flex items-center border border-blue-600/40 dark:border-blue-700/50 text-blue-700 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-all duration-300 py-2 px-4 rounded-sm"
             href={`mailto:${personalInfo.email}`}
           >
             <FiMail className="w-5 h-5 mr-2" />
