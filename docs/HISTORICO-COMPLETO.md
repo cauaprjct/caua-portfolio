@@ -27,7 +27,7 @@ O portfólio saiu de um site “dois trilhos” (dev + técnico) para um funil d
 - Correções de **mobile**, **LinkedIn**, **SEO/URL canônica** e copy
 - Documentação de conteúdo e plano de execução
 
-Tudo publicado em produção via `vercel --prod`.
+Durante o ciclo, a maior parte dos deploys foi via **`vercel --prod` (CLI)**. O projeto Vercel **já está ligado ao GitHub**: push em `main` também dispara build/deploy automático (ver seção 8).
 
 ---
 
