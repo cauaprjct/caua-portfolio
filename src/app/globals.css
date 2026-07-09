@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Trilhos: acentos semânticos */
+  --color-dev: var(--dev);
+  --color-dev-glow: var(--dev-glow);
+  --color-tech: var(--tech);
+  --color-tech-glow: var(--tech-glow);
+  --color-seam: var(--seam);
+
+  --radius: 0.5rem;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.625rem;
+
+  /* base dark (forcedTheme) */
+  --background: oklch(0.16 0.006 260);
+  --foreground: oklch(0.97 0.003 260);
+  --card: oklch(0.205 0.008 260);
+  --card-foreground: oklch(0.97 0.003 260);
+  --primary: oklch(0.97 0.003 260);
+  --primary-foreground: oklch(0.2 0.008 260);
+  --secondary: oklch(0.27 0.01 260);
+  --secondary-foreground: oklch(0.97 0.003 260);
+  --muted: oklch(0.27 0.01 260);
+  --muted-foreground: oklch(0.72 0.012 260);
+  --accent: oklch(0.27 0.01 260);
+  --accent-foreground: oklch(0.97 0.003 260);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.7 0.04 230);
+
+  /* Trilho DEV — frio, elétrico */
+  --dev: oklch(0.82 0.12 216);
+  --dev-glow: oklch(0.72 0.15 234);
+
+  /* Trilho TÉCNICO — quente, hardware */
+  --tech: oklch(0.81 0.14 64);
+  --tech-glow: oklch(0.72 0.17 46);
+
+  /* Costura / divisa luminosa */
+  --seam: oklch(0.98 0.015 90);
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+    /* Header fixo — âncoras não ficam escondidas atrás da barra */
+    scroll-padding-top: 5.5rem;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Headlines grandes: tracking apertado, quebras estáveis */
+  h1,
+  h2 {
+    letter-spacing: -0.035em;
+    text-wrap: balance;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+
+  /* Textura de grade sutil (fundo técnico) */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, oklch(1 0 0 / 4%) 1px, transparent 1px),
+      linear-gradient(to bottom, oklch(1 0 0 / 4%) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+
+  .bg-dots {
+    background-image: radial-gradient(oklch(1 0 0 / 7%) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+}
+
+/* Respeita quem prefere menos movimento */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
