@@ -6,12 +6,16 @@ Documento de referência com **toda a informação textual e de dados** publicad
 |--------|--------|
 | **URL de produção** | https://portifolio-caua.vercel.app |
 | **URL canônica (código)** | `src/config/site.ts` → `SITE_URL` |
+| **GitHub** | https://github.com/cauaprjct/caua-portfolio |
+| **Vercel** | projeto `portifolio-caua` — **conectado ao GitHub** (`main` → produção) |
+| **Deploy preferencial** | `git push origin main` (auto-deploy na Vercel) |
 | **Fonte de dados principal** | `src/config/data.ts` |
 | **Metadados / SEO** | `src/config/metadata.ts` (usa `SITE_URL`) |
 | **Manifest PWA** | `src/app/manifest.ts` |
 | **Idioma** | pt-BR |
-| **Última consolidação** | 2026-07-09 (Fase 6 — polish) |
+| **Última consolidação** | 2026-07-09 (Fase 6 + sync GitHub + doc Vercel) |
 | **Plano de execução** | `docs/PLANO-EXECUCAO.md` |
+| **Histórico / deploys** | `docs/HISTORICO-COMPLETO.md` |
 
 ---
 

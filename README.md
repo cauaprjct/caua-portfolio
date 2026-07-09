@@ -15,7 +15,32 @@ O hero divide a tela em dois trilhos:
 - [Tailwind CSS](https://tailwindcss.com/) v4
 - [Framer Motion](https://www.framer.com/motion/) (respeita `prefers-reduced-motion`)
 - Tipografia: Archivo + JetBrains Mono
-- Deploy na [Vercel](https://vercel.com/)
+- Deploy na [Vercel](https://vercel.com/) (projeto `portifolio-caua`)
+
+## Repositório e deploy
+
+| Item | Valor |
+|------|--------|
+| **GitHub** | https://github.com/cauaprjct/caua-portfolio |
+| **Vercel** | projeto `portifolio-caua` — **conectado a este repo** |
+| **Branch de produção** | `main` |
+| **URL** | https://portifolio-caua.vercel.app |
+
+**Fluxo normal:** commit + `git push origin main` → a Vercel faz o deploy automático.
+
+```bash
+git add .
+git commit -m "sua mensagem"
+git push origin main
+```
+
+Deploy manual pela CLI (opcional; não substitui o push no GitHub):
+
+```bash
+vercel --prod --yes
+```
+
+Detalhes da integração e do que aconteceu neste ciclo: [`docs/HISTORICO-COMPLETO.md`](docs/HISTORICO-COMPLETO.md) (seção 8).
 
 ## Desenvolvimento
 
@@ -31,7 +56,7 @@ Todo o conteúdo (textos, projetos, skills, certificações) fica centralizado e
 
 | Arquivo | O que tem |
 |---------|-----------|
-| [`docs/HISTORICO-COMPLETO.md`](docs/HISTORICO-COMPLETO.md) | Tudo o que foi feito neste ciclo de melhorias (timeline, fases, arquivos, deploys) |
+| [`docs/HISTORICO-COMPLETO.md`](docs/HISTORICO-COMPLETO.md) | Tudo o que foi feito neste ciclo (timeline, fases, **Vercel ↔ GitHub**, deploys) |
 | [`docs/PLANO-EXECUCAO.md`](docs/PLANO-EXECUCAO.md) | Plano em fases 0–6 (status e decisões) |
 | [`docs/CONTEUDO-DO-SITE.md`](docs/CONTEUDO-DO-SITE.md) | Inventário do texto e dados publicados no site |
 

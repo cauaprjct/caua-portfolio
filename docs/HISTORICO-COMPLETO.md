@@ -5,7 +5,9 @@ Documento que registra **tudo o que foi feito** nesta série de melhorias no por
 | Campo | Valor |
 |--------|--------|
 | **Site em produção** | https://portifolio-caua.vercel.app |
-| **Projeto Vercel** | `portifolio-caua` (conta `cauaprjct`) |
+| **Projeto Vercel** | `portifolio-caua` (team `cauaprjcts-projects`) |
+| **Repo GitHub** | https://github.com/cauaprjct/caua-portfolio |
+| **Integração** | Vercel **conectada** ao GitHub (`main` → produção) |
 | **Período** | 2026-07-09 |
 | **Fora de escopo (decisão)** | Foto de rosto · Screenshots/prints · Domínio próprio |
 | **Documentos relacionados** | `docs/CONTEUDO-DO-SITE.md` · `docs/PLANO-EXECUCAO.md` |
@@ -286,19 +288,74 @@ Helper: `sortByFeaturedOrder()`.
 
 ---
 
-## 8. Deploys
+## 8. Deploys e integração Vercel ↔ GitHub
 
-Todos via **Vercel CLI** (`vercel --prod --yes`) no projeto `portifolio-caua`.
+### 8.1 Como a Vercel está configurada
 
-Alias de produção: **https://portifolio-caua.vercel.app**
+| Item | Valor |
+|------|--------|
+| **Projeto Vercel** | `portifolio-caua` |
+| **Project ID** | `prj_QBniZsABClV9VSnggJHuW9x2SrcV` |
+| **Team / scope** | `cauaprjcts-projects` |
+| **Framework** | Next.js |
+| **Node** | 24.x |
+| **URL produção** | https://portifolio-caua.vercel.app |
+| **Dashboard** | https://vercel.com/cauaprjcts-projects/portifolio-caua |
+| **Repo GitHub conectado** | https://github.com/cauaprjct/caua-portfolio |
+| **Branch de produção** | `main` |
+| **Pasta local `.vercel`** | linka CLI ↔ projeto (não versionar: está no `.gitignore`) |
 
-Ciclos de deploy incluíram, entre outros:
+**Confirmação do autor (2026-07-09):** a Vercel **está conectada** a esse repositório GitHub.  
+Ou seja: **push em `main` → build e deploy automático na Vercel.**
+
+### 8.2 Dois caminhos de deploy (usados / válidos)
+
+| Caminho | Quando usar | Efeito |
+|---------|-------------|--------|
+| **Git (recomendado daqui pra frente)** | `git push origin main` | Vercel detecta o commit e faz deploy de produção |
+| **CLI** | `vercel --prod --yes` | Upload/build direto; **não atualiza o GitHub** sozinho |
+
+Durante o ciclo de melhorias (fases 0–6), quase tudo foi publicado só pela **CLI**, com a pasta **sem Git**. Por isso o site no ar ficou novo e o GitHub ficou velho até a sincronização.
+
+### 8.3 Sincronização GitHub (2026-07-09)
+
+| Item | Detalhe |
+|------|---------|
+| Problema | Pasta local sem `.git`; GitHub parado em 2026-07-03 |
+| Ação | `git init`, remote HTTPS, commit root com o estado de produção |
+| Commit | `ee8b1e4` — *feat: portfolio completo — sites, cases, FAQ e conversão* |
+| Push | `main` com `--force-with-lease` (histórico local novo, sem ancestral comum) |
+| Resultado | **Local ≈ GitHub ≈ código da produção** |
+
+Depois desse push, qualquer commit futuro em `main` deve:
+1. Atualizar o GitHub  
+2. Disparar deploy na Vercel (por causa da integração Git)
+
+### 8.4 Fluxo recomendado daqui pra frente
+
+```text
+1. Editar código local
+2. git add / commit
+3. git push origin main
+4. Vercel faz build e publica em portifolio-caua.vercel.app
+```
+
+**Evitar** usar só a CLI para mudanças “finais” sem push — o GitHub volta a ficar desatualizado.
+
+CLI ainda é útil para:
+- preview ad-hoc (`vercel`)
+- emergências / debug
+- listar projetos (`vercel project ls`)
+
+### 8.5 Deploys feitos neste ciclo (via CLI)
+
 - Oferta de sites + CTA  
 - Fix hero mobile  
 - Seção client sites  
 - Copy SuporTI  
 - LinkedIn  
 - Fases 0–3, 5 e 6  
+- + sincronização Git (push `main` → deploy Git-triggered esperado)
 
 ---
 
@@ -326,7 +383,8 @@ Ciclos de deploy incluíram, entre outros:
 | Trocar texto WhatsApp | `whatsappPrefill` |
 | Atualizar inventário textual | `docs/CONTEUDO-DO-SITE.md` |
 | Smoke de links | `node scripts/smoke-links.mjs` |
-| Deploy | `vercel --prod --yes` |
+| Deploy (preferencial) | `git push origin main` → Vercel (GitHub integrado) |
+| Deploy (CLI, se precisar) | `vercel --prod --yes` — **também** fazer push no Git para não dessincronizar |
 
 ---
 
@@ -344,6 +402,8 @@ Ciclos de deploy incluíram, entre outros:
 | SEO/URL canônica corretos | ✅ |
 | LinkedIn funcional | ✅ |
 | Docs de conteúdo + plano + histórico | ✅ |
+| GitHub sincronizado com local/produção | ✅ (`ee8b1e4`+) |
+| Integração Vercel ↔ GitHub documentada | ✅ |
 | Depoimentos locais | ⏸ Pendente (Fase 4) |
 
 ---
