@@ -94,6 +94,12 @@
     letter-spacing: -0.035em;
     text-wrap: balance;
   }
+
+  /* Foco visível de verdade: o anel do navegador é preto sobre fundo preto */
+  :focus-visible {
+    outline: 2px solid var(--dev);
+    outline-offset: 3px;
+  }
 }
 
 @layer utilities {
@@ -119,6 +125,111 @@
   }
 }
 
+/* ------------------------------------------------------------------ */
+/*  Reveal                                                             */
+/*  Sem a classe .js (JS desligado, ou script bloqueado) todo          */
+/*  [data-reveal] fica visível. O HTML do servidor nunca sai com       */
+/*  opacity:0 — ver Reveal.tsx e o script em layout.tsx.               */
+/* ------------------------------------------------------------------ */
+
+html.js [data-reveal] {
+  opacity: 0;
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
+}
+
+html.js [data-reveal="up"] {
+  transform: translateY(22px);
+}
+
+html.js [data-reveal="lift"] {
+  transform: translateY(10px) scale(0.99);
+}
+
+html.js [data-reveal="left"] {
+  transform: translateX(-24px);
+}
+
+html.js [data-reveal="right"] {
+  transform: translateX(24px);
+}
+
+html.js [data-reveal][data-shown] {
+  opacity: 1;
+  transform: none;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Entrada do hero e do header                                        */
+/*  Mesma regra do reveal: sem `.js` no <html> nada disso roda e o     */
+/*  conteúdo nasce visível. `both` mantém o estado inicial durante o   */
+/*  delay, sem precisar de opacity:0 no HTML.                          */
+/* ------------------------------------------------------------------ */
+
+@keyframes enter-from-left {
+  from {
+    opacity: 0;
+    transform: translateX(-32px);
+  }
+}
+
+@keyframes enter-from-right {
+  from {
+    opacity: 0;
+    transform: translateX(32px);
+  }
+}
+
+@keyframes enter-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+}
+
+@keyframes enter-from-top {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+}
+
+@keyframes nudge-down {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(7px);
+  }
+}
+
+html.js .anim-left {
+  animation: enter-from-left 0.7s ease-out both;
+}
+
+html.js .anim-right {
+  animation: enter-from-right 0.7s ease-out both;
+}
+
+html.js .anim-pop {
+  animation: enter-pop 0.7s 0.25s ease-out both;
+}
+
+html.js .anim-top {
+  animation: enter-from-top 0.5s 0.4s ease-out both;
+}
+
+.anim-nudge {
+  animation: nudge-down 1.8s ease-in-out infinite;
+}
+
+/* FAB de WhatsApp não pode pintar na frente do menu aberto */
+html[data-nav-open="true"] .js-fab {
+  display: none;
+}
+
 /* Respeita quem prefere menos movimento */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -128,5 +239,11 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
+  }
+
+  html.js [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 }

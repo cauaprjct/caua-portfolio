@@ -59,6 +59,7 @@ Todo o conteúdo (textos, projetos, skills, certificações) fica centralizado e
 | [`docs/HISTORICO-COMPLETO.md`](docs/HISTORICO-COMPLETO.md) | Tudo o que foi feito neste ciclo (timeline, fases, **Vercel ↔ GitHub**, deploys) |
 | [`docs/PLANO-EXECUCAO.md`](docs/PLANO-EXECUCAO.md) | Plano em fases 0–6 (status e decisões) |
 | [`docs/CONTEUDO-DO-SITE.md`](docs/CONTEUDO-DO-SITE.md) | Inventário do texto e dados publicados no site |
+| [`docs/ANALISE-UX-E-PLANO-27jul2026.md`](docs/ANALISE-UX-E-PLANO-27jul2026.md) | Crítica de UX/design, medições e o que foi executado (13 → 8 seções) |
 
 ## Contato
 
